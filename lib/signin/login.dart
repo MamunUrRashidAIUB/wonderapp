@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wonderapp/signin/signup.dart';
+import 'package:wonderapp/home/home.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key});
@@ -21,7 +22,7 @@ class Login extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 filled: true,
@@ -29,35 +30,35 @@ class Login extends StatelessWidget {
                 hintText: "Enter your Email",
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   filled: true,
                   fillColor: Color.fromRGBO(236, 236, 236, 100),
                   hintText: "Enter your password"),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Container(
               height: 50,
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
+                  onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context)=>const home()));},
+                  child: const Text(
                     "Login",
                   )),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have Account?"),
+                const Text("Don't have Account?"),
                 TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -66,7 +67,7 @@ class Login extends StatelessWidget {
                             builder: (context) => RegistrationScreen()),
                       );
                     },
-                    child: Text("Register"))
+                    child: const Text("Register"))
               ],
             )
           ],

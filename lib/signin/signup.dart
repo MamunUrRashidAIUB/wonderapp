@@ -6,7 +6,7 @@ class RegistrationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Registration"),
+        title: const Text("Registration"),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -14,65 +14,68 @@ class RegistrationScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("UserName"),
-              TextField(
+              const Text("UserName"),
+              const TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "Enter User Name",
                 ),
               ),
-              SizedBox(height: 16),
-              Text("Email"),
-              TextField(
+              const SizedBox(height: 16),
+              const Text("Email"),
+              const TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "Enter Your Email",
                 ),
               ),
-              SizedBox(height: 16),
-              Text("Create a password"),
-              TextField(
+              const SizedBox(height: 16),
+              const Text("Create a password"),
+              const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "Enter a password",
                 ),
               ),
-              SizedBox(height: 16),
-              Text("Confirm password"),
-              SizedBox(
+              const SizedBox(height: 16),
+              const Text("Confirm password"),
+              const SizedBox(
                 height: 16,
               ),
-              TextField(
+              const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "Repeat password",
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               SizedBox(
                 height: 50,
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: Text("Create Account"),
+                  child: const Text("Create Account"),
                 ),
               ),
-              SizedBox(height: 16),
-              Row(
-                children: [
-                  Text("Already have an account?"),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Login()),
-                      );
-                    },
-                    child: Text("Login"),
-                  ),
-                ],
+              const SizedBox(height: 16),
+              Center(
+                child: Row(
+                  children: [
+                    const Text("Already have an account?"),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Login()),
+                        );
+                      },
+                      child: const Text("Login"),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
