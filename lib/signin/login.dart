@@ -46,11 +46,14 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            Container(
+            SizedBox(
               height: 50,
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context)=>const home()));},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const home()));
+                  },
                   child: const Text(
                     "Login",
                   )),
