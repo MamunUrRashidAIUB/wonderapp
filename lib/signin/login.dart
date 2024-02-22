@@ -17,63 +17,74 @@ class Login extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                filled: true,
-                fillColor: Color.fromRGBO(236, 236, 236, 100),
-                hintText: "Enter your Email",
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(child: Image.asset("images/hi.jpg")),
               ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const TextField(
-              decoration: InputDecoration(
+              const TextField(
+                decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   filled: true,
                   fillColor: Color.fromRGBO(236, 236, 236, 100),
-                  hintText: "Enter your password"),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            SizedBox(
-              height: 50,
-              width: double.infinity,
-              child: ElevatedButton(
+                  hintText: "Enter your Email",
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              const TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Color.fromRGBO(236, 236, 236, 100),
+                    hintText: "Enter your password"),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              SizedBox(
+                height: 50,
+                width: double.infinity,
+                child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const home()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const home()),
+                    );
                   },
                   child: const Text(
                     "Login",
-                  )),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text("Don't have Account?"),
-                TextButton(
+                  ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have an Account?"),
+                  TextButton(
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => RegistrationScreen()),
+                          builder: (context) => RegistrationScreen(),
+                        ),
                       );
                     },
-                    child: const Text("Register"))
-              ],
-            )
-          ],
+                    child: const Text("Register"),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
