@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wonderapp/home/SocialMedia.dart';
+import 'package:wonderapp/home/settings.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});
@@ -120,21 +121,24 @@ class Home extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              SizedBox(
-                height: 150,
-                width: 150,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
+              Padding(
+                padding: const EdgeInsets.only(right: 180),
+                child: SizedBox(
+                  height: 150,
+                  width: 150,
+                  child: ElevatedButton(
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const settings()),);},
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      backgroundColor: const Color.fromRGBO(200, 200, 200, 100),
                     ),
-                    backgroundColor: const Color.fromRGBO(200, 200, 200, 100),
-                  ),
-                  child: Image.asset(
-                    "images/settings.ico",
-                    height: 75,
-                    width: 75,
+                    child: Image.asset(
+                      "images/settings.ico",
+                      height: 75,
+                      width: 75,
+                    ),
                   ),
                 ),
               ),
