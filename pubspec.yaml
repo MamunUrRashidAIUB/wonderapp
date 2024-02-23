@@ -68,6 +68,7 @@ flutter:
     - images/tollpay.ico
     - images/settings.ico
     - images/facebook_icon.ico
+    - images/google_icon.ico
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

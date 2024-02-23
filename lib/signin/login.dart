@@ -81,8 +81,8 @@ class _LoginState extends State<Login> {
                 height: 16,
               ),
               SizedBox(
-                height: 50,
-                width: 250,
+                height: 30,
+                width: 150,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromRGBO(0, 0, 0, 100)),
@@ -115,13 +115,21 @@ class _LoginState extends State<Login> {
                                   const Color.fromRGBO(255, 255, 255, 100)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Image.asset("images/facebook_icon.ico",
-                            height: 30,width: 30,),
-                            const SizedBox(width: 10,), const Text(
-                            "Login with Facebook",
-                            style:  TextStyle(color: Colors.black),
-                          )],
-                          ) ),
+                            children: [
+                              Image.asset(
+                                "images/facebook_icon.ico",
+                                height: 30,
+                                width: 30,
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Login with Facebook",
+                                style: TextStyle(color: Colors.black),
+                              )
+                            ],
+                          )),
                     )
                   ],
                 ),
@@ -141,9 +149,19 @@ class _LoginState extends State<Login> {
                           style: ElevatedButton.styleFrom(
                               backgroundColor:
                                   const Color.fromRGBO(255, 255, 255, 100)),
-                          child: const Text(
-                            "Login with Google",
-                            style: TextStyle(color: Colors.black),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                "images/google_icon.ico",
+                                height: 30,
+                                width: 30,
+                              ),const SizedBox(width: 10,),
+                              const Text(
+                                "Login with Google",
+                                style: TextStyle(color: Colors.black),
+                              )
+                            ],
                           )),
                     )
                   ],

@@ -56,7 +56,8 @@ class RegistrationScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: const Text("Create Account"),
+                  style: ElevatedButton.styleFrom(backgroundColor: const Color.fromRGBO(0, 0, 0, 100)),
+                  child: const Text("Create Account",style: TextStyle(color: Colors.white),),
                 ),
               ),
               const SizedBox(height: 16),
