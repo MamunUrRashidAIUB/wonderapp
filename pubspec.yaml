@@ -73,6 +73,10 @@ flutter:
     - images/snapchat_icon.ico
     - images/telegram_icon.ico
     - images/tiktok_icon.ico
+    - images/instagram_icon.ico
+    - images/twitter_icon.ico
+    - images/whatsapp_icon.ico
+    - images/youtube_icon.ico
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

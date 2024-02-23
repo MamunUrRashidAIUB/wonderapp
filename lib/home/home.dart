@@ -78,7 +78,7 @@ class Home extends StatelessWidget {
                     height: 150,
                     width: 150,
                     child: ElevatedButton(
-                      onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context)=>const social_media()),);},
+                      onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context)=>const SocialMedia()),);},
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25),
