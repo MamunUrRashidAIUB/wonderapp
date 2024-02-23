@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wonderapp/signin/signup.dart';
+import 'package:wonderapp/home/home.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -60,7 +62,7 @@ class _LoginState extends State<Login> {
                       borderRadius: BorderRadius.circular(15),
                     ),
                     filled: true,
-                    fillColor: Color.fromRGBO(236, 236, 236, 100),
+                    fillColor: const Color.fromRGBO(236, 236, 236, 100),
                     hintText: "Enter your password",
                     suffixIcon: IconButton(
                       icon: Icon(
@@ -82,12 +84,69 @@ class _LoginState extends State<Login> {
                 height: 50,
                 width: 250,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromRGBO(0, 0, 0, 100)),
                   onPressed: () {
-                    // Your login logic here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Home()),
+                    );
                   },
                   child: const Text(
                     "Login",
+                    style: TextStyle(color: Colors.white),
                   ),
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 55),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      height: 50,
+                      width: 250,
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromRGBO(255, 255, 255, 100)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [Image.asset("images/facebook_icon.ico",
+                            height: 30,width: 30,),
+                            const SizedBox(width: 10,), const Text(
+                            "Login with Facebook",
+                            style:  TextStyle(color: Colors.black),
+                          )],
+                          ) ),
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 55),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      height: 50,
+                      width: 250,
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromRGBO(255, 255, 255, 100)),
+                          child: const Text(
+                            "Login with Google",
+                            style: TextStyle(color: Colors.black),
+                          )),
+                    )
+                  ],
                 ),
               ),
               Row(
@@ -96,7 +155,10 @@ class _LoginState extends State<Login> {
                   const Text("Don't have an Account?"),
                   TextButton(
                     onPressed: () {
-                      // Your navigation logic here
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegistrationScreen()));
                     },
                     child: const Text("Register"),
                   ),
