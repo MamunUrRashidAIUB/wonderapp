@@ -62,7 +62,10 @@ flutter:
   assets:
     
     - images/hi.jpg
-    - images/ticon.ico
+    - images/translator.ico
+    - images/map.ico
+    - images/social_media.ico
+    - images/tollpay.ico
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

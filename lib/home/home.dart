@@ -37,7 +37,7 @@ class home extends StatelessWidget {
                             ),
                             backgroundColor:
                                 const Color.fromRGBO(200, 200, 200, 100)),
-                        child:Image.asset("images/ticon.ico",height: 50,width: 50,)
+                        child:Image.asset("images/translator.ico",height: 100,width: 100,)
                         ),
                   ),
                   const SizedBox(
@@ -54,10 +54,7 @@ class home extends StatelessWidget {
                             ),
                             backgroundColor:
                                 const Color.fromRGBO(200, 200, 200, 100)),
-                        child: const Text(
-                          "translator",
-                          style: TextStyle(fontSize: 20, color: Colors.black),
-                        )),
+                        child: Image.asset("images/map.ico",height: 75,width: 75,)),
                   ),
                 ],
               ),
@@ -78,11 +75,8 @@ class home extends StatelessWidget {
                             ),
                             backgroundColor:
                                 const Color.fromRGBO(200, 200, 200, 100)),
-                        child: const Center(
-                          child: Text(
-                            "social Media",
-                            style: TextStyle(fontSize: 20, color: Colors.black),
-                          ),
+                        child:  Center(
+                          child: Image.asset("images/social_media.ico",height: 75,width: 75,),
                         )),
                   ),
                   const SizedBox(
@@ -99,10 +93,7 @@ class home extends StatelessWidget {
                             ),
                             backgroundColor:
                                 const Color.fromRGBO(200, 200, 200, 100)),
-                        child: const Text(
-                          "toll-pay",
-                          style: TextStyle(fontSize: 20, color: Colors.black),
-                        )),
+                        child: Image.asset("images/tollpay.ico",height: 75,width: 75,)),
                   ),
                 ],
               ),
