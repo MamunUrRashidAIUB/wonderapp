@@ -13,7 +13,6 @@ class home extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            
             children: [
               const Center(
                 child: Text(
@@ -36,11 +35,10 @@ class home extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            backgroundColor: const Color.fromRGBO(200, 200, 200, 100)),
-                        child: const Text(
-                          "Map",
-                          style: TextStyle(fontSize: 20, color: Colors.black),
-                        )),
+                            backgroundColor:
+                                const Color.fromRGBO(200, 200, 200, 100)),
+                        child:Image.asset("images/ticon.ico",height: 50,width: 50,)
+                        ),
                   ),
                   const SizedBox(
                     height: 16,
@@ -54,7 +52,8 @@ class home extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            backgroundColor: const Color.fromRGBO(200, 200, 200, 100)),
+                            backgroundColor:
+                                const Color.fromRGBO(200, 200, 200, 100)),
                         child: const Text(
                           "translator",
                           style: TextStyle(fontSize: 20, color: Colors.black),
@@ -77,7 +76,8 @@ class home extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            backgroundColor: const Color.fromRGBO(200, 200, 200, 100)),
+                            backgroundColor:
+                                const Color.fromRGBO(200, 200, 200, 100)),
                         child: const Center(
                           child: Text(
                             "social Media",
@@ -97,7 +97,8 @@ class home extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            backgroundColor: const Color.fromRGBO(200, 200, 200, 100)),
+                            backgroundColor:
+                                const Color.fromRGBO(200, 200, 200, 100)),
                         child: const Text(
                           "toll-pay",
                           style: TextStyle(fontSize: 20, color: Colors.black),
@@ -108,7 +109,6 @@ class home extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-             
             ],
           ),
         ));
