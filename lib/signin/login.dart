@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:wonderapp/signin/signup.dart';
-import 'package:wonderapp/home/home.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key});
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
+
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  bool _isObscure = true;
 
   @override
   Widget build(BuildContext context) {
@@ -24,42 +29,61 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(right: 50),
                 child: Center(child: Image.asset("images/hi.jpg")),
               ),
-              const TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  filled: true,
-                  fillColor: Color.fromRGBO(236, 236, 236, 100),
-                  hintText: "Enter your Email",
+              Container(
+                height: 50,
+                width: 250,
+                child: TextField(
+                  obscureText: _isObscure,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    filled: true,
+                    fillColor: const Color.fromRGBO(236, 236, 236, 100),
+                    hintText: "Enter your Email",
+                  ),
                 ),
               ),
               const SizedBox(
                 height: 16,
               ),
-              const TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
+              Container(
+                height: 50,
+                width: 250,
+                child: TextField(
+                  obscureText: _isObscure,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                     filled: true,
                     fillColor: Color.fromRGBO(236, 236, 236, 100),
-                    hintText: "Enter your password"),
+                    hintText: "Enter your password",
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _isObscure ? Icons.visibility : Icons.visibility_off,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      },
+                    ),
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 16,
               ),
-              const SizedBox(
-                height: 50,
-              ),
               SizedBox(
                 height: 50,
-                width: double.infinity,
+                width: 250,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const home()),
-                    );
+                    // Your login logic here
                   },
                   child: const Text(
                     "Login",
@@ -72,12 +96,7 @@ class Login extends StatelessWidget {
                   const Text("Don't have an Account?"),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => RegistrationScreen(),
-                        ),
-                      );
+                      // Your navigation logic here
                     },
                     child: const Text("Register"),
                   ),
