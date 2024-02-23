@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wonderapp/home/SocialMedia.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});
@@ -77,7 +78,7 @@ class Home extends StatelessWidget {
                     height: 150,
                     width: 150,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context)=>const social_media()),);},
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25),
